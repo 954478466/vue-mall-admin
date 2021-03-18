@@ -1,0 +1,59 @@
+.home {
+  .sidebar {
+    width: 180px;
+    position: fixed;
+    height: 100%;
+
+    .ant-menu {
+      height: 100%;
+    }
+  }
+
+  .main {
+    margin-left: 180px;
+    transition: all .3s;
+
+    &.menu-unlock {
+      margin-left: 80px;
+    }
+
+    .headerbar {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px 0 10px;
+      border-bottom: 1px solid #eee;
+
+      .breadcrumb {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .user-info {
+        float: right;
+        text-align: center;
+        cursor: pointer;
+
+        li {
+          padding: 0 20px;
+          background-color: #fff;
+        }
+
+        li:not(:first-child) {
+          display: none;
+
+          &:hover {
+            background-color: #eee;
+            font-weight: 700;
+            color: #999;
+          }
+        }
+
+        &:hover {
+          li {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
