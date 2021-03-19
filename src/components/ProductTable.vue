@@ -82,9 +82,7 @@ export default {
     };
   },
   beforeCreate() {
-    this.$store.dispatch('setProductList', {
-      page: 1,
-    });
+    this.$store.dispatch('setProductList');
   },
   methods: {
     turnPage(pagination) {
@@ -95,7 +93,7 @@ export default {
     edit(text, record) {
       this.$router.push({
         name: 'ProductAdd',
-        params: {
+        query: {
           id: record.id,
         },
       });

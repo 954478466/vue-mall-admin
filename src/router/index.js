@@ -31,7 +31,7 @@ const asyncRoutes = [
         },
       },
       {
-        path: 'add/:id',
+        path: 'add',
         name: 'ProductAdd',
         component: () => import('@/views/page/ProductAdd.vue'),
         meta: {

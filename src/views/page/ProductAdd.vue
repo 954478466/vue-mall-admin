@@ -40,7 +40,7 @@ export default {
     };
   },
   async created() {
-    const { id } = this.$route.params;
+    const { id } = this.$route.query;
     if (id) {
       const res = await this.$api.getProductionById(id);
       this.form = res.data;
@@ -49,7 +49,7 @@ export default {
   methods: {
     async next() {
       if (this.current === 1) {
-        const { id } = this.$route.params;
+        const { id } = this.$route.query;
         let res;
         if (id) {
           res = await this.$api.editProduction(this.form);

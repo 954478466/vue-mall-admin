@@ -30,5 +30,10 @@ export default {
   created() {
     this.$store.commit('changeSelectedKeys', [this.$router.currentRoute.matched[1].name]);
   },
+  watch: {
+    '$route.name': function () {
+      this.$store.commit('changeSelectedKeys', [this.$route.name]);
+    },
+  },
 };
 </script>
